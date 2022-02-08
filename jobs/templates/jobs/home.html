@@ -37,22 +37,24 @@
                 {% for job in jobs.all %}
 
 
-                <div class="col-md-4">
-                    <div class="card mb-4 box-shadow">
-                        <img class="card-img-top"
-                             src="{{ job.image.url }}"
-                             alt="Card image cap">
-                        <div class="card-body">
-                            <p class="card-text">{{ job.summary }}</p>
+                    <div class="col-md-4 shadow-sm">
+                        <a href="{% url 'detail' job.id  %}">
+                        <div class="card mb-4 box-shadow">
+                            <img class="card-img-top"
+                                 src="{{ job.image.url }}"
+                                 alt="Card image cap">
+                            <div class="card-body">
+                                <p class="card-text">{{ job.summary }}</p>
 
+                            </div>
                         </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
 
+                </a>
+            </div>
+            {% endfor %}
         </div>
 
+    </div>
     </div>
 
 </main>

@@ -1,1 +1,39 @@
-{{ job.summary }}
+<!doctype html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../../../favicon.ico">
+
+    <title>Nechay</title>
+
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+</head>
+
+<body>
+
+<main role="main">
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">Article detail </h1>
+            <p class="lead text-muted">{{ job.summary }}
+            </p>
+
+            <img src="{{ job.image.url }}" height="300" alt="">
+            <p>
+                <a href="{% url 'home' %}" class="btn btn-primary my-2">Back</a>
+
+            </p>
+        </div>
+    </section>
+</main>
+
+<script src="{% static 'jquery-3.6.0.min.js' %}"></script>
+<script src="https://unpkg.com/@popperjs/core@2"></script>
+<script src="{% static 'js/bootstrap.min.js' %}"></script>
+</body>
+</html>
